@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\GL">
+      <UniqueIdentifier>{ef341264-b487-4e4e-913f-60110c054e98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\GL\internal">
+      <UniqueIdentifier>{426f37bc-3623-4f26-b846-26145551c283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PNG">
+      <UniqueIdentifier>{b3d5b9f0-2e5e-47f2-a954-0f12ff87ebeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\PNG\png">
+      <UniqueIdentifier>{ff3b5b7a-fdc4-4223-b8d1-34aad15fedec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PNG">
+      <UniqueIdentifier>{6381ffbb-ae04-42d8-b6a9-726ce871c929}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PNG\png">
+      <UniqueIdentifier>{8fa69d6f-0a79-466a-a1b1-977664382b98}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\CoordonneesHomogenes3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Direction3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Position3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Rotation3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\TransformationGeometrique3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Translation3D.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\ChargePngFile.cpp">
+      <Filter>Source Files\PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Espace3UC.cpp">
+      <Filter>Source Files\PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Image.cpp">
+      <Filter>Source Files\PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\ImageUtils.cpp">
+      <Filter>Source Files\PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\PngFile.cpp">
+      <Filter>Source Files\PNG</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\adler32.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\compress.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\crc32.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\deflate.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\gzio.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\infback.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\inffast.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\inflate.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\inftrees.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\png.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\pngerror.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\pngget.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\pngmem.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\pngpread.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\pngread.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\pngrio.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\pngrtran.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\pngrutil.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\pngset.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\pngtrans.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\pngwio.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\pngwrite.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\pngwtran.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\pngwutil.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\trees.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\uncompr.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Include\PNG\Png\zutil.c">
+      <Filter>Source Files\PNG\png</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Include\CoordonneesHomogenes3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Direction3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Position3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Rotation3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\TransformationGeometrique3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\Translation3D.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\amesa.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\dmesa.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\fxmesa.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\ggimesa.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\gl.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\gl_mangle.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\GLAUX.H">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\GLAux.vc8.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\glew.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\glext.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\glfbdev.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\glu.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\glu_mangle.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\glut.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\glutf90.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\glx.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\glx_mangle.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\glxew.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\glxext.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\mesa_wgl.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\mglmesa.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\osmesa.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\svgamesa.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\uglglutshapes.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\uglmesa.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\vms_x_fix.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\wglew.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\wmesa.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\xmesa.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\xmesa_x.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\xmesa_xf86.h">
+      <Filter>Header Files\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\internal\dri_interface.h">
+      <Filter>Header Files\GL\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\internal\glcore.h">
+      <Filter>Header Files\GL\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\GL\internal\sarea.h">
+      <Filter>Header Files\GL\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\ChargePngFile.h">
+      <Filter>Header Files\PNG</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\Espace3UC.h">
+      <Filter>Header Files\PNG</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\Image.h">
+      <Filter>Header Files\PNG</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\ImageUtils.h">
+      <Filter>Header Files\PNG</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\PngFile.h">
+      <Filter>Header Files\PNG</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\Png\cexcept.h">
+      <Filter>Header Files\PNG\png</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\Png\crc32.h">
+      <Filter>Header Files\PNG\png</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\Png\deflate.h">
+      <Filter>Header Files\PNG\png</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\Png\inffast.h">
+      <Filter>Header Files\PNG\png</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\Png\inffixed.h">
+      <Filter>Header Files\PNG\png</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\Png\inflate.h">
+      <Filter>Header Files\PNG\png</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\Png\inftrees.h">
+      <Filter>Header Files\PNG\png</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\Png\png.h">
+      <Filter>Header Files\PNG\png</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\Png\pngconf.h">
+      <Filter>Header Files\PNG\png</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\Png\trees.h">
+      <Filter>Header Files\PNG\png</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\Png\zconf.h">
+      <Filter>Header Files\PNG\png</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\Png\zconf.in.h">
+      <Filter>Header Files\PNG\png</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\Png\zlib.h">
+      <Filter>Header Files\PNG\png</Filter>
+    </ClInclude>
+    <ClInclude Include="Include\PNG\Png\zutil.h">
+      <Filter>Header Files\PNG\png</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
