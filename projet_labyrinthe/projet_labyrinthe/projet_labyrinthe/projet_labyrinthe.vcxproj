@@ -51,17 +51,24 @@
     <ClCompile Include="Include\PNG\Png\trees.c" />
     <ClCompile Include="Include\PNG\Png\uncompr.c" />
     <ClCompile Include="Include\PNG\Png\zutil.c" />
+    <ClCompile Include="Src\Personnage.cpp" />
     <ClCompile Include="Src\CoordonneesHomogenes3D.cpp" />
     <ClCompile Include="Src\Direction3D.cpp" />
+    <ClCompile Include="Src\Etage.cpp" />
+    <ClCompile Include="Src\Labyrinthe.cpp" />
     <ClCompile Include="Src\Main.cpp" />
     <ClCompile Include="Src\Position3D.cpp" />
     <ClCompile Include="Src\Rotation3D.cpp" />
+    <ClCompile Include="Src\Salle.cpp" />
+    <ClCompile Include="Src\SalleCouloir.cpp" />
     <ClCompile Include="Src\TransformationGeometrique3D.cpp" />
     <ClCompile Include="Src\Translation3D.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Include\Personnage.h" />
     <ClInclude Include="Include\CoordonneesHomogenes3D.h" />
     <ClInclude Include="Include\Direction3D.h" />
+    <ClInclude Include="Include\Etage.h" />
     <ClInclude Include="Include\GL\amesa.h" />
     <ClInclude Include="Include\GL\dmesa.h" />
     <ClInclude Include="Include\GL\fxmesa.h" />
@@ -96,6 +103,7 @@
     <ClInclude Include="Include\GL\xmesa.h" />
     <ClInclude Include="Include\GL\xmesa_x.h" />
     <ClInclude Include="Include\GL\xmesa_xf86.h" />
+    <ClInclude Include="Include\Labyrinthe.h" />
     <ClInclude Include="Include\PNG\ChargePngFile.h" />
     <ClInclude Include="Include\PNG\Espace3UC.h" />
     <ClInclude Include="Include\PNG\Image.h" />
@@ -117,6 +125,8 @@
     <ClInclude Include="Include\PNG\Png\zutil.h" />
     <ClInclude Include="Include\Position3D.h" />
     <ClInclude Include="Include\Rotation3D.h" />
+    <ClInclude Include="Include\Salle.h" />
+    <ClInclude Include="Include\SalleCouloir.h" />
     <ClInclude Include="Include\TransformationGeometrique3D.h" />
     <ClInclude Include="Include\Translation3D.h" />
   </ItemGroup>

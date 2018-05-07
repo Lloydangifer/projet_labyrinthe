@@ -6,6 +6,9 @@
 #include <GL/glu.h>
 
 #include "..\Include\PNG\ChargePngFile.h"
+#include "..\Include\Position3D.h"
+#include "..\Include\Personnage.h"
+#include "..\Include\SalleCouloir.h"
 
 /* Etat des touches du clavier: true si appuyée, false sinon */
 bool* keyStates = new bool[256];
@@ -19,6 +22,12 @@ static const float jaune[] = { 1.0F, 1.0F, 0.0F, 1.0F };
 static const float rouge[] = { 1.0F, 0.0F, 0.0F, 1.0F };
 static const float vert[] = { 0.0F, 1.0F, 0.0F, 1.0F };
 static const float bleu[] = { 0.0F, 0.0F, 1.0F, 1.0F };
+
+/* Personnage */
+Personnage *personnage;
+
+/* Labyrinthe */
+SalleCouloir *salle;
 
 /* tableau des textures */
 GLuint texID[2];
@@ -77,30 +86,74 @@ void init(void) {
 
 }
 
-/* Scene dessinee                               */
+/************** Scene dessinee *********************/
 
 void scene(void) {
+	Position3D character_pos = personnage->getPosition();
+	GLfloat pos_l0[4] = { character_pos.x(), character_pos.y(), character_pos.z(), 1.0f };
+	glLightfv(GL_LIGHT0, GL_POSITION, pos_l0);
 	glPushMatrix();
+	salle->dessiner_salle();
 	glPopMatrix();
+}
+
+/****************** Gestion des entrées clavier *********************/
+void keyOperations(void) {
+	static double a = 0.3;
+
+	if (personnage)
+	{
+		if (keyStates['q'] && !keyStates['d']) {
+			personnage->tourner(a);
+		}
+		else if (keyStates['d'] && !keyStates['q']) {
+			personnage->tourner(-a);
+		}
+
+		if (keyStates['z'] && !keyStates['s']) {
+			personnage->avancer();
+		}
+		else if (keyStates['s'] && !keyStates['z']) {
+			personnage->reculer();
+		}
+	}
 }
 
 /* Fonction executee lors d'un rafraichissement */
 /* de la fenetre de dessin                      */
 
 void display(void) {
-	glClearColor(0.0F, 0.0F, 0.0F, 0.0F);
+
+	int window_width = glutGet(GLUT_WINDOW_WIDTH); // Largeur de la fenêtre
+	int window_height = glutGet(GLUT_WINDOW_HEIGHT); // Hauteur de la fenêtre
+
+	keyOperations();
+
+	Direction3D personnage_direction = personnage->getDirection();
+	Position3D personnage_position = personnage->getPosition();
+
+	glClearColor(0.0F, 0.0F, 0.0F, 1.0F);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-	const GLfloat light0_position[] = { 0.0,0.0,0.0,1.0 };
-	const GLfloat light1_position[] = { -1.0,1.0,1.0,0.0 };
-	const GLfloat light2_position[] = { 1.0,-1.0,1.0,0.0 };
-	glLightfv(GL_LIGHT0, GL_POSITION, light0_position);
-	glLightfv(GL_LIGHT1, GL_POSITION, light1_position);
-	glLightfv(GL_LIGHT2, GL_POSITION, light2_position);
+	int width = window_width;
+	int height = window_height;
+
+	glViewport(0, 0, width, height);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+
+	gluPerspective(80.0F, (float)width / height, 1.0, 500.0);
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+
 	glPushMatrix();
+	gluLookAt(personnage_position.x()                                    , personnage_position.y() + personnage->getHauteur() , personnage_position.z(),
+		      personnage_position.x() + personnage_direction.dx() * 500.0, personnage_position.y() + personnage->getHauteur() , personnage_position.z() + personnage_direction.dz() * 500.0,
+		      0.0, 1.0, 0.0);
 	scene();
 	glPopMatrix();
 	glFlush();
 	glutSwapBuffers();
+
 	int error = glGetError();
 	if (error != GL_NO_ERROR) {
 		printf("Attention erreur %d\n", error);
@@ -111,7 +164,16 @@ void display(void) {
 /********** Libération de la mémoire pour les objets de l'application *************/
 void free_memory()
 {
- // Rien pour le moment
+	if (personnage)
+	{
+		delete personnage;
+		personnage = nullptr;
+	}
+	/*if (salle)
+	{
+		delete salle;
+		salle = nullptr;
+	}*/
 }
 
 /************ Vide la mémoire utilisée et quitte le programme **************/
@@ -125,11 +187,6 @@ void free_memory_and_exit()
 	}
 
 	exit(0);
-}
-
-/****************** Gestion des entrées clavier *********************/
-void keyOperations(void) {
-	// Rien pour le moment
 }
 
 /* Fonction executee lorsqu'aucun evenement     */
@@ -179,7 +236,7 @@ void initKeyStates(void) {
 	}
 }
 
-/* Fonction principale                          */
+/************* Fonction principale *********************************/
 int main(int argc, char **argv) {
 
 	initKeyStates();
@@ -187,10 +244,14 @@ int main(int argc, char **argv) {
 	glutInitDisplayMode(GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE);
 	glutInitWindowSize(900, 500);
 
+	personnage = new Personnage();
+	salle = new SalleCouloir();
+
 	glutInitWindowPosition(0, 0);
 	// Au lieu d'utiliser glutCreateWindow(), on utilise glutEnterGameMode() qui permet 
 	//  d'avoir un mode plein écran optimisé (selon la doc)
-	glutEnterGameMode();
+	//glutEnterGameMode();
+	glutCreateWindow("Fenetre");
 
 	init(); // Initialisations openGL
 
