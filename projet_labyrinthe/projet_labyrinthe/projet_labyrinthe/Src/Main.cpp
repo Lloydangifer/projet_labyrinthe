@@ -8,7 +8,7 @@
 #include "..\Include\PNG\ChargePngFile.h"
 #include "..\Include\Position3D.h"
 #include "..\Include\Personnage.h"
-#include "..\Include\SalleCouloir.h"
+#include "..\Include\Labyrinthe.h"
 
 /* Etat des touches du clavier: true si appuyée, false sinon */
 bool* keyStates = new bool[256];
@@ -27,7 +27,7 @@ static const float bleu[] = { 0.0F, 0.0F, 1.0F, 1.0F };
 Personnage *personnage;
 
 /* Labyrinthe */
-SalleCouloir *salle;
+Labyrinthe *labyrinthe;
 
 /* tableau des textures */
 GLuint texID[2];
@@ -93,7 +93,7 @@ void scene(void) {
 	GLfloat pos_l0[4] = { character_pos.x(), character_pos.y(), character_pos.z(), 1.0f };
 	glLightfv(GL_LIGHT0, GL_POSITION, pos_l0);
 	glPushMatrix();
-	salle->dessiner_salle();
+	labyrinthe->dessiner_labyrinthe();
 	glPopMatrix();
 }
 
@@ -169,11 +169,11 @@ void free_memory()
 		delete personnage;
 		personnage = nullptr;
 	}
-	/*if (salle)
+	if (labyrinthe)
 	{
-		delete salle;
-		salle = nullptr;
-	}*/
+		delete labyrinthe;
+		labyrinthe = nullptr;
+	}
 }
 
 /************ Vide la mémoire utilisée et quitte le programme **************/
@@ -245,7 +245,7 @@ int main(int argc, char **argv) {
 	glutInitWindowSize(900, 500);
 
 	personnage = new Personnage();
-	salle = new SalleCouloir();
+	labyrinthe = new Labyrinthe();
 
 	glutInitWindowPosition(0, 0);
 	// Au lieu d'utiliser glutCreateWindow(), on utilise glutEnterGameMode() qui permet 

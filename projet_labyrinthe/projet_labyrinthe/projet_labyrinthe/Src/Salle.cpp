@@ -39,3 +39,13 @@ void Salle::dessiner_mur(void)
 	glVertex3f((longueur / 2.0f), -(largeur / 2.0f), 0.0f);
 	glEnd();
 }
+
+void Salle::set_position(Position3D pos)
+{
+	this->position = pos;
+}
+
+Position3D Salle::get_position(void)
+{
+	return this->position;
+}

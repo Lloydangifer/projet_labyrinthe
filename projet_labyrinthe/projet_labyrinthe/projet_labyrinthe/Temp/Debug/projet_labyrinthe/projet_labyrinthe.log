@@ -1,9 +1,4 @@
-﻿  SalleCouloir.cpp
-  Salle.cpp
-  Personnage.cpp
-c:\users\lloyd\documents\github\projet_labyrinthe\projet_labyrinthe\projet_labyrinthe\projet_labyrinthe\src\personnage.cpp(48): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'double'
-c:\users\lloyd\documents\github\projet_labyrinthe\projet_labyrinthe\projet_labyrinthe\projet_labyrinthe\src\personnage.cpp(48): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 2 has type 'double'
-c:\users\lloyd\documents\github\projet_labyrinthe\projet_labyrinthe\projet_labyrinthe\projet_labyrinthe\src\personnage.cpp(48): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 3 has type 'double'
-  Generating Code...
+﻿  Main.cpp
+c:\users\lloyd\documents\github\projet_labyrinthe\projet_labyrinthe\projet_labyrinthe\projet_labyrinthe\src\main.cpp(93): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
   projet_labyrinthe.vcxproj -> C:\Users\Lloyd\Documents\GitHub\projet_labyrinthe\projet_labyrinthe\projet_labyrinthe\projet_labyrinthe\.\Temp\Debug\projet_labyrinthe\projet_labyrinthe.exe
   projet_labyrinthe.vcxproj -> .\Temp\Debug\projet_labyrinthe\projet_labyrinthe.pdb (Full PDB)

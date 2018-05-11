@@ -15,4 +15,7 @@ public:
 	virtual void dessiner_salle(void);
 	void dessiner_sol(void);
 	void dessiner_mur(void);
+
+	void set_position(Position3D pos);
+	Position3D get_position(void);
 };

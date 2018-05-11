@@ -19,9 +19,9 @@ void SalleCouloir::dessiner_salle(void) {
 	glMaterialfv(GL_FRONT, GL_SHININESS, shininess);
 	// sol
 	this->dessiner_sol();
-	glPopMatrix();
+	//glPopMatrix();
 	// mur de gauche
-	this->dessiner_mur();
+	//this->dessiner_mur();
 	// mur de droite 
 	glPopMatrix();
 }
